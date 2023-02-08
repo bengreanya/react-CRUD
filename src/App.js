@@ -12,7 +12,6 @@ function App() {
         {/* <Route path="*" />
         <Redirect to="/auth/sign-in" /> */}
       </Switch>
-      {/* <Auth /> */}
     </div>
   );
 }
