@@ -1,6 +1,6 @@
 # Bulletin Board CRUD
 
-## /auth
+v.≤## /auth
 
     - Context for storing the current user (user, setUser state)
     - `Auth` component with form for user data (email, password)

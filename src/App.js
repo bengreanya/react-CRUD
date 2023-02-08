@@ -6,13 +6,13 @@ import Posts from './components/Posts.js';
 function App() {
   return (
     <div className="App">
-      {/* <Switch>
+      <Switch>
         <Route path="/posts" component={Posts} />
         <Route path="/auth/:type" component={Auth} />
-        <Route path="*" />
-        <Redirect to="/auth/sign-in" />
-      </Switch> */}
-      <Auth />
+        {/* <Route path="*" />
+        <Redirect to="/auth/sign-in" /> */}
+      </Switch>
+      {/* <Auth /> */}
     </div>
   );
 }
