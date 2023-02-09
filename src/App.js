@@ -1,16 +1,18 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Auth from './components/Auth.js';
+import NewPost from './components/NewPost.js';
 import Posts from './components/Posts.js';
 
 function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/posts" component={Posts} />
-        <Route path="/auth/:type" component={Auth} />
+        <Route exact path="/posts" component={Posts} />
+        <Route exact path="/auth/:type" component={Auth} />
         {/* <Route path="*" />
         <Redirect to="/auth/sign-in" /> */}
+        <Route exact path="/posts/new" component={NewPost} />
       </Switch>
     </div>
   );
