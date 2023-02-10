@@ -15,7 +15,7 @@ function App() {
         <Route exact path="/posts/edit/:id" component={EditPost} />
         <Route exact path="/auth/:type" component={Auth} />
         <Route exact path="/posts/new" component={NewPost} />
-        <Route path="*">
+        <Route exact path="*">
           <Redirect to="/auth/sign-in" />
         </Route>
         <Route exact path="/posts/new" component={NewPost} />

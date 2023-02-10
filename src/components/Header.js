@@ -1,17 +1,16 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Redirect, useHistory } from 'react-router-dom';
 import { useUser } from '../context/UserContext.js';
 import { signOut } from '../services/auth.js';
 import './Header.css';
 
 export default function Header() {
   const { user, setUser } = useUser();
-  //   if (!user) {
-  //     location.replace = './auth';
-  //   }
+  const history = useHistory();
   const handleClick = async () => {
     await signOut();
     setUser(null);
+    history.push('/auth');
   };
   return (
     <header>
