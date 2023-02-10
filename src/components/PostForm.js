@@ -6,7 +6,6 @@ export default function PostForm({ title = '', description = '', submitHandler }
   const [descriptionInput, setDescriptionInput] = useState(description);
 
   useEffect(() => {
-    console.log('click');
     setTitleInput(title);
     setDescriptionInput(description);
   }, [title, description]);

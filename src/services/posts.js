@@ -4,8 +4,8 @@ export async function getPosts() {
   const resp = await client.from('bulletins').select('*');
   return checkError(resp);
 }
-export async function createPost(title, description) {
-  const resp = await client.from('bulletins').insert({ title, description });
+export async function createPost(title, description, user_id) {
+  const resp = await client.from('bulletins').insert({ title, description, user_id });
   return checkError(resp);
 }
 
