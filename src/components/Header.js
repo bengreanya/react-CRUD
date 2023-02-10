@@ -6,21 +6,19 @@ import './Header.css';
 
 export default function Header() {
   const { user, setUser } = useUser();
-  const history = useHistory();
   const handleClick = async () => {
     await signOut();
     setUser(null);
-    history.push('/auth');
   };
   return (
     <header>
       <h2>Bulletin Board</h2>
       {user && (
         <>
-          <div>Hello {user.email}</div>
-
-          <button onClick={handleClick}>Sign Out</button>
-          <Link to="/posts/new">Create a new Post!</Link>
+          <div className="greeting">Hello {user.email}</div>
+          <button className="button" onClick={handleClick}>
+            Sign Out
+          </button>
         </>
       )}
     </header>

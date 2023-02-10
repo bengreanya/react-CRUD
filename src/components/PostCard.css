@@ -1,0 +1,9 @@
+.postcard {
+  border: solid black 2px;
+  background: linear-gradient(rgb(236, 230, 61), rgb(230, 225, 57));
+  height: 10em;
+  width: 10em;
+  padding: 1em;
+  margin: 8px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { useUser } from '../context/UserContext.js';
 import { usePosts } from '../hooks/usePosts.js';
 import PostCard from './PostCard.js';
@@ -11,6 +11,9 @@ export default function Posts() {
   }
   return (
     <div>
+      <Link className="link" to="/posts/new">
+        Create a new Post!
+      </Link>
       {posts.map((post) => (
         <PostCard key={post.id} {...post} />
       ))}

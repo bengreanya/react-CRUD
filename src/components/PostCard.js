@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useUser } from '../context/UserContext.js';
+import './PostCard.css';
 
 export default function PostCard({ title, description, user_id, id }) {
   const { user } = useUser();
