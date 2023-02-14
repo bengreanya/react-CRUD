@@ -20,5 +20,5 @@ export function usePosts() {
     fetchData();
   }, []);
 
-  return { posts, error, loading };
+  return { posts, setPosts, error, loading };
 }

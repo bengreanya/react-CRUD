@@ -4,7 +4,7 @@ import { useUser } from '../context/UserContext.js';
 import { usePosts } from '../hooks/usePosts.js';
 import PostCard from './PostCard.js';
 export default function Posts() {
-  const { posts } = usePosts();
+  const { posts, setPosts } = usePosts();
   const { user } = useUser();
   if (!user) {
     return <Redirect to="/auth" />;
@@ -15,7 +15,7 @@ export default function Posts() {
         Create a new Post!
       </Link>
       {posts.map((post) => (
-        <PostCard key={post.id} {...post} />
+        <PostCard key={post.id} {...post} posts={posts} setPosts={setPosts} />
       ))}
     </div>
   );

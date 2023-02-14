@@ -18,3 +18,8 @@ export async function getPostDetail(id) {
   const resp = await client.from('bulletins').select('*').match({ id }).single();
   return checkError(resp);
 }
+
+export async function deletePost(id) {
+  const resp = await client.from('bulletins').delete().match({ id }).single();
+  return checkError(resp);
+}
