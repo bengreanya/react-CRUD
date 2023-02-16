@@ -29,7 +29,9 @@ export default function PostCard({ title, description, posts, setPosts, user_id,
           <p>
             <Link to={`/posts/edit/${id}`}>Edit</Link>
           </p>
-          <button onClick={handleClick}>Delete Post</button>
+          <button className="button" onClick={handleClick}>
+            Delete Post
+          </button>
         </>
       )}
     </div>

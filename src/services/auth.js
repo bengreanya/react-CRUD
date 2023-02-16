@@ -1,4 +1,3 @@
-import { useHistory } from 'react-router-dom';
 import { client } from './client.js';
 
 export function getUser() {
